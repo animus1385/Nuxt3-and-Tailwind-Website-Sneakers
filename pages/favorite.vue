@@ -1,7 +1,5 @@
 <template>
-    <Header></Header>
-    <slot></slot>
-    <PopupSlide />
+    <BlockList title="Мои закладки" />
 </template>
 
 <script>

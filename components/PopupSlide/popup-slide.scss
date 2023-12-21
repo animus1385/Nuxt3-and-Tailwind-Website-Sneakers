@@ -1,0 +1,31 @@
+.modal-cart {
+    @apply h-full grid grid-rows-[100px_1fr_200px] gap-[15px]; 
+    &__cart {
+        @apply flex flex-col flex-1 divide-y divide-gray-100 dark:divide-gray-800;
+    }
+    &__header {
+        @apply flex items-center justify-between p-[30px];
+    }
+    &__title {
+        @apply title text-base text-[25px] font-bold leading-6 text-gray-900 dark:text-white;
+    }
+    &__content {
+        @apply px-[30px] grid gap-[30px];
+    }
+    &__footer {
+        @apply p-[30px];
+    }
+    &__text {
+        @apply text-black text-[16px] not-italic leading-none flex justify-between mb-[28px];
+
+        span:last-child {
+            @apply font-semibold;
+        }
+    }
+    &__btn {
+        @apply p-[18px] text-white text-[16px] font-medium not-italic bg-[#9DD458] rounded-[18px] w-full flex items-center justify-center;
+        svg {
+            @apply ml-[15px] w-[30px] h-[30px];
+        }
+    }
+}

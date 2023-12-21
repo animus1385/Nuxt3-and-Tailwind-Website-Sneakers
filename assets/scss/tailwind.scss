@@ -3,6 +3,22 @@
 @tailwind utilities;
 @import './fonts.scss';
 
-@layer base {
+img {
+    @apply w-full h-full object-cover;
+}
 
+body {
+    font-family: 'Inter';
+}
+
+@layer base {
+    .title {
+        @apply text-black text-[32px] font-bold not-italic leading-[normal];
+    }
+    .icon-custom {
+        @apply border-solid border-[1px]  w-[32px] h-[32px] border-[#D3D3D3] text-[#D3D3D3] items-center flex justify-center rounded-[5px] transition-all;
+        &:hover {
+            @apply text-black border-black;
+        }
+    }
 }

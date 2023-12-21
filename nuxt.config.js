@@ -1,13 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
     devtools: { enabled: false },
-    modules: ['@nuxt/ui'],
+    modules: ['@nuxt/ui', '@nuxt/image', '@pinia/nuxt'],
     colorMode: {
         preference: 'light',
     },
     tailwindcss: {
         cssPath: '~/assets/scss/tailwind.scss',
-        configPath: 'tailwind.config.ts',
+        configPath: 'tailwind.config.js',
         exposeConfig: false,
         viewer: false,
     },
@@ -21,4 +21,7 @@ export default defineNuxtConfig({
             pathPrefix: false,
         },
     ],
+    pinia: {
+        autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
+    },
 });

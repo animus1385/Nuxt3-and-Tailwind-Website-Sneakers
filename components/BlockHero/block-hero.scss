@@ -1,0 +1,55 @@
+.hero {
+    @apply mb-[39px];
+    &__container {
+        @apply container;
+    }
+}
+
+.carousel {
+    @apply w-full h-full;
+    &__info {
+        @apply flex flex-col;
+
+        span {
+            @apply text-[38px] not-italic font-semibold leading-normal;
+        }
+        & > span:first-child {
+            @apply text-[#8BB43C];
+        }
+        & > span:last-child {
+            @apply text-black;
+        }
+    }
+    &__track {
+        @apply px-[60px];
+    }
+    &__viewport {
+        @apply overflow-visible;
+    }
+    &__item {
+        @apply w-full grid grid-cols-2 relative min-h-[480px] overflow-hidden rounded-[30px];
+    }
+    &__slide {
+        &--active {
+            @apply absolute ;
+        }
+    }
+    &__item-img {
+        @apply absolute bottom-0 left-0 right-0 top-0 z-[-1];
+    }
+    button {
+        @apply w-[60px] h-[56px]  rounded-[50%] bg-white text-[#C8C8C8];
+    }
+    &__prev {
+        @apply left-[-37px];
+        &--disabled {
+            @apply hidden;
+        }
+    }
+    &__next {
+        @apply right-[-37px];
+        &--disabled {
+            @apply hidden;
+        }
+    }
+}

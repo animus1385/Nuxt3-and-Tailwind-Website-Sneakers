@@ -1,0 +1,30 @@
+.card-product {
+    @apply relative flex flex-col  border-[1px] border-solid rounded-[40px] px-[30px] py-[34px] transition-all;
+    &__img {
+        @apply mb-[14px] max-w-[133px] max-h-[112px] object-contain self-center;
+    }
+    &__favorite {
+        @apply absolute z-[1] top-[30px] left-[30px] icon-custom;
+    }
+    &__title {
+        @apply text-black font-normal not-italic text-[14px] mb-[14px] cursor-pointer;
+    }
+    &__bottom {
+        @apply flex justify-between;
+    }
+    &__price {
+        @apply flex flex-col;
+    }
+    &__label {
+        @apply text-[#BDBDBD] text-[11px] font-medium;
+    }
+    &__value {
+        @apply text-black text-[14px] font-bold;
+    }
+    &:hover {
+        box-shadow: 0px 14px 30px 0px rgba(0, 0, 0, 0.05);
+    }
+    &__btn-add {
+        @apply icon-custom;
+    }
+}

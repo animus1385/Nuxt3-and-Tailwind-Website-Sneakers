@@ -1,0 +1,22 @@
+.list {
+    @apply mb-[50px];
+    &__container {
+        @apply container;
+    }
+    &__head {
+        @apply flex justify-between mb-[40px];
+    }
+    &__title {
+        @apply title;
+    }
+    &__list {
+        @apply grid grid-cols-4 gap-[40px];
+    }
+    &__input {
+        @apply relative flex items-center w-[250px];
+        input {
+            @apply border-[#F3F3F3] border-solid border-[1px] py-[15px]   rounded-[10px];
+        }
+       
+    }
+}

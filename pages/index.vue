@@ -1,13 +1,10 @@
 <template>
-  страница
+    <div>
+        <BlockHero />
+        <BlockList />
+    </div>
 </template>
 
-<script>
-export default {
+<script setup></script>
 
-}
-</script>
-
-<style>
-
-</style>
+<style></style>
