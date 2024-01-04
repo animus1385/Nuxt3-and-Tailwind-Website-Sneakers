@@ -1,55 +1,63 @@
 .hero {
-    @apply mb-[39px];
-    &__container {
-        @apply container;
-    }
+  @apply mb-[39px];
+  &__container {
+    @apply container overflow-hidden;
+  }
 }
 
 .carousel {
-    @apply w-full h-full;
-    &__info {
-        @apply flex flex-col;
+  @apply w-full h-full  rounded-[50px] overflow-visible;
+  &__info {
+    @apply flex flex-col justify-center  items-start pl-[80px];
+  }
+  &__title {
+    @apply flex flex-col items-start text-[50px] not-italic font-semibold leading-normal;
 
-        span {
-            @apply text-[38px] not-italic font-semibold leading-normal;
-        }
-        & > span:first-child {
-            @apply text-[#8BB43C];
-        }
-        & > span:last-child {
-            @apply text-black;
-        }
+    & > span:first-child {
+      @apply text-[#8BB43C];
     }
-    &__track {
-        @apply px-[60px];
+    & > span:last-child {
+      @apply text-black;
     }
-    &__viewport {
-        @apply overflow-visible;
+  }
+  &__track {
+    @apply px-[60px] gap-[30px];
+  }
+  &__viewport {
+    @apply overflow-visible;
+  }
+  &__item {
+    @apply  w-full grid grid-cols-2 relative min-h-[480px] overflow-hidden rounded-[30px];
+  }
+  &__slide {
+    &--active {
+    //   @apply absolute;
     }
-    &__item {
-        @apply w-full grid grid-cols-2 relative min-h-[480px] overflow-hidden rounded-[30px];
+  }
+  &__item-img {
+    @apply absolute bottom-0 left-0 right-0 top-0 z-[-1];
+  }
+
+  &__prev,
+  &__next {
+    @apply absolute w-[60px] h-[56px]  rounded-[50%] bg-white text-[#C8C8C8] flex justify-center items-center;
+  }
+  &__btns {
+    @apply absolute  w-full h-full top-0  z-[1] flex justify-between items-center;
+  }
+  &__btn {
+    @apply flex items-center justify-center bg-[#A5D364] rounded-[110px] w-[200px] py-[14px] text-[16px] font-bold text-white;
+  }
+  &__prev {
+    @apply left-[-37px] rotate-[180deg];
+    &--disabled {
+      @apply hidden;
     }
-    &__slide {
-        &--active {
-            @apply absolute ;
-        }
+  }
+  &__next {
+    @apply right-[-37px];
+    &--disabled {
+      @apply hidden;
     }
-    &__item-img {
-        @apply absolute bottom-0 left-0 right-0 top-0 z-[-1];
-    }
-    button {
-        @apply w-[60px] h-[56px]  rounded-[50%] bg-white text-[#C8C8C8];
-    }
-    &__prev {
-        @apply left-[-37px];
-        &--disabled {
-            @apply hidden;
-        }
-    }
-    &__next {
-        @apply right-[-37px];
-        &--disabled {
-            @apply hidden;
-        }
-    }
+  }
 }

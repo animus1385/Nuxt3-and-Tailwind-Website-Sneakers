@@ -1,10 +1,20 @@
 <template>
-    <div>
-        <BlockHero />
-        <BlockList />
-    </div>
+  <div>
+    <BlockHero />
+    <BlockList :url="url" :products="store.obj" />
+  </div>
 </template>
 
-<script setup></script>
+<script setup>
+import { useStore } from "../store/store";
+
+const store = useStore();
+const { search, orderBy } = storeToRefs(store);
+
+
+store.obj = await store.getFavorites();
+
+watch([search, orderBy], async () => (store.obj = await store.getFavorites()));
+</script>
 
 <style></style>

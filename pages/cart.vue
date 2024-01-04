@@ -1,5 +1,5 @@
 <template>
-    <BlockList title="Мои покупки" />
+    <BlockList title="Мои покупки" :products="store.obj" />
 </template>
 
 <script></script>

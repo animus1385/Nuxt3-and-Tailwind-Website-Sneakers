@@ -1,35 +1,36 @@
 .header {
-    @apply py-[68px] border-solid  border-[1px] border-[#EAEAEA] mb-[74px];
-    &__container {
-        @apply container  grid grid-cols-[max-content_max-content] justify-between;
-        padding-left: 50px ;
+  @apply py-[68px] border-solid  border-[1px] border-[#EAEAEA] mb-[74px];
+  &__container {
+    @apply container  grid grid-cols-[max-content_max-content] justify-between;
+    padding-left: 50px;
+  }
+  &__logo {
+    @apply grid grid-cols-[repeat(2,max-content)] gap-[26px] items-center;
+  }
+  &__img {
+    @apply w-[64px] h-[64px];
+  }
+  &__title {
+    @apply flex flex-col;
+    span {
+      @apply text-[32px] not-italic leading-[normal];
     }
-    &__logo {
-        @apply grid grid-cols-[repeat(2,max-content)] gap-[26px] items-center;
+    span:first-child {
+      @apply font-bold text-black uppercase;
     }
-    &__img {
-        @apply w-[64px] h-[64px];
+    span:last-child {
+      @apply text-[#9D9D9D] text-[22.4px];
     }
-    &__title {
-        @apply flex flex-col;
-        span {
-            @apply text-[32px] not-italic leading-[normal];
-        }
-        span:first-child {
-            @apply font-bold text-black uppercase;
-        }
-        span:last-child {
-            @apply text-[#9D9D9D] text-[22.4px];
-        }
-    }
-    &__panel-btn {
-        @apply grid grid-cols-3 gap-[53px];
-        button {
-            @apply grid grid-cols-[30px_1fr] items-center gap-[10px] text-[#5C5C5C]  leading-[normal] text-[21px] font-medium;
+  }
+  &__panel-btn {
+    @apply grid items-center grid-cols-3 gap-[53px];
+    button,
+    a {
+      @apply grid grid-cols-[30px_1fr] items-center gap-[10px] text-[#5C5C5C]  leading-[normal] text-[21px] font-medium;
 
-            svg {
-                @apply w-full h-full;
-            }
-        }
+      svg {
+        @apply w-full h-full;
+      }
     }
+  }
 }
